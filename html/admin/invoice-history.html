@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice History - Easy Billing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <div class="app-layout">
+        <div class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">📄</div>
+                <div class="logo-text">Easy Billing</div>
+            </div>
+
+            <div class="mode-badge">
+                <div class="mode-title">👤 Admin Mode</div>
+                <div class="mode-subtitle">Full access to all features</div>
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="dashboard.html" class="nav-item">📊 Dashboard</a></li>
+                <li><a href="create-invoice.html" class="nav-item">📝 Create Invoice</a></li>
+                <li><a href="clients.html" class="nav-item">👥 Clients</a></li>
+                <li class="nav-item active"><a href="invoice-history.html" class="nav-item active">🕐 Invoice History</a></li>
+                <li><a href="reports.html" class="nav-item">📈 Reports</a></li>
+                <li><a href="settings.html" class="nav-item">⚙️ Settings</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <header>
+                <h1>Invoice History</h1>
+                <button class="btn">+ Create Invoice</button>
+            </header>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Invoice #</th>
+                            <th>Client</th>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="invoice-number">INV-2024-001</td>
+                            <td>Acme Corporation</td>
+                            <td>Feb 10, 2026</td>
+                            <td class="amount">$2,500.00</td>
+                            <td><span class="status status-paid">Paid</span></td>
+                        </tr>
+                        <tr>
+                            <td class="invoice-number">INV-2024-002</td>
+                            <td>Tech Solutions Inc</td>
+                            <td>Feb 12, 2026</td>
+                            <td class="amount">$1,850.00</td>
+                            <td><span class="status status-pending">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td class="invoice-number">INV-2024-003</td>
+                            <td>Global Enterprises</td>
+                            <td>Feb 8, 2026</td>
+                            <td class="amount">$3,200.00</td>
+                            <td><span class="status status-paid">Paid</span></td>
+                        </tr>
+                        <tr>
+                            <td class="invoice-number">INV-2024-004</td>
+                            <td>Creative Studio</td>
+                            <td>Feb 5, 2026</td>
+                            <td class="amount">$950.00</td>
+                            <td><span class="status status-paid">Paid</span></td>
+                        </tr>
+                        <tr>
+                            <td class="invoice-number">INV-2024-005</td>
+                            <td>Digital Media Co</td>
+                            <td>Feb 14, 2026</td>
+                            <td class="amount">$4,100.00</td>
+                            <td><span class="status status-pending">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td class="invoice-number">INV-2024-006</td>
+                            <td>Metro Services</td>
+                            <td>Jan 28, 2026</td>
+                            <td class="amount">$1,275.00</td>
+                            <td><span class="status status-overdue">Overdue</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

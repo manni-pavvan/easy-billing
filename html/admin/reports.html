@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports - Easy Billing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body> 
+    <div class="app-layout">
+        <div class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">📄</div>
+                <div class="logo-text">Easy Billing</div>
+            </div>
+
+            <div class="mode-badge">
+                <div class="mode-title">👤 Admin Mode</div>
+                <div class="mode-subtitle">Full access to all features</div>
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="dashboard.html" class="nav-item">📊 Dashboard</a></li>
+                <li><a href="create-invoice.html" class="nav-item">📝 Create Invoice</a></li>
+                <li><a href="clients.html" class="nav-item">👥 Clients</a></li>
+                <li><a href="invoice-history.html" class="nav-item">🕐 Invoice History</a></li>
+                <li class="nav-item active"><a href="reports.html" class="nav-item active">📈 Reports</a></li>
+                <li><a href="settings.html" class="nav-item">⚙️ Settings</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <header>
+                <h1>Reports</h1>
+            </header>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-label">Total Revenue</div>
+                    <div class="stat-value">$18,415</div>
+                    <div class="stat-change positive">↑ 12.5% from last month</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-label">Invoices Sent</div>
+                    <div class="stat-value">24</div>
+                    <div class="stat-change positive">↑ 8 from last month</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-label">Pending Amount</div>
+                    <div class="stat-value">$5,950</div>
+                    <div class="stat-change negative">↓ 3 pending invoices</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-label">Active Clients</div>
+                    <div class="stat-value">18</div>
+                    <div class="stat-change positive">↑ 2 new this month</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

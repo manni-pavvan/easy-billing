@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clients - Easy Billing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <div class="app-layout">
+        <div class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">📄</div>
+                <div class="logo-text">Easy Billing</div>
+            </div>
+
+            <div class="mode-badge">
+                <div class="mode-title">👤 Admin Mode</div>
+                <div class="mode-subtitle">Full access to all features</div>
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="dashboard.html" class="nav-item">📊 Dashboard</a></li>
+                <li><a href="create-invoice.html" class="nav-item">📝 Create Invoice</a></li>
+                <li class="nav-item active"><a href="clients.html" class="nav-item active">👥 Clients</a></li>
+                <li><a href="invoice-history.html" class="nav-item">🕐 Invoice History</a></li>
+                <li><a href="reports.html" class="nav-item">📈 Reports</a></li>
+                <li><a href="settings.html" class="nav-item">⚙️ Settings</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <header>
+                <h1>Clients</h1>
+                <button class="btn">+ Add New Client</button>
+            </header>
+
+            <div class="clients-grid">
+                <div class="client-card">
+                    <div class="client-name">Acme Corporation</div>
+                    <div class="client-info">📧 contact@acme.com</div>
+                    <div class="client-info">📞 +1 (555) 123-4567</div>
+                    <div class="client-info">📍 New York, NY</div>
+                    <span class="client-status status-active">Active</span>
+                </div>
+
+                <div class="client-card">
+                    <div class="client-name">Tech Solutions Inc</div>
+                    <div class="client-info">📧 hello@techsol.com</div>
+                    <div class="client-info">📞 +1 (555) 234-5678</div>
+                    <div class="client-info">📍 San Francisco, CA</div>
+                    <span class="client-status status-active">Active</span>
+                </div>
+
+                <div class="client-card">
+                    <div class="client-name">Global Enterprises</div>
+                    <div class="client-info">📧 info@global.com</div>
+                    <div class="client-info">📞 +1 (555) 345-6789</div>
+                    <div class="client-info">📍 Chicago, IL</div>
+                    <span class="client-status status-active">Active</span>
+                </div>
+
+                <div class="client-card">
+                    <div class="client-name">Metro Services</div>
+                    <div class="client-info">📧 contact@metro.com</div>
+                    <div class="client-info">📞 +1 (555) 456-7890</div>
+                    <div class="client-info">📍 Boston, MA</div>
+                    <span class="client-status status-inactive">Inactive</span>
+                </div>
+
+                <div class="client-card">
+                    <div class="client-name">Creative Studio</div>
+                    <div class="client-info">📧 hi@creative.com</div>
+                    <div class="client-info">📞 +1 (555) 567-8901</div>
+                    <div class="client-info">📍 Austin, TX</div>
+                    <span class="client-status status-active">Active</span>
+                </div>
+
+                <div class="client-card">
+                    <div class="client-name">Digital Media Co</div>
+                    <div class="client-info">📧 team@digitalmedia.com</div>
+                    <div class="client-info">📞 +1 (555) 678-9012</div>
+                    <div class="client-info">📍 Seattle, WA</div>
+                    <span class="client-status status-active">Active</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

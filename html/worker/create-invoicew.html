@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Invoice - Easy Billing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <div class="app-layout">
+        <div class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">📄</div>
+                <div class="logo-text">Easy Billing</div>
+            </div>
+
+            <div class="mode-badge worker-mode-badge" onclick="toggleModeMenu(event)">
+                <div class="mode-title">👷 <span id="currentMode">Worker Mode</span></div>
+                <div class="mode-subtitle">Limited access - Create & view invoices</div>
+                
+                <!-- Mode Switch Dropdown -->
+                <div class="mode-dropdown" id="modeDropdown">
+                    <div class="mode-dropdown-header">Switch Role</div>
+                    <div class="mode-option" onclick="switchMode('admin', event)">
+                        <div class="mode-option-icon admin-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66z"/>
+                            </svg>
+                        </div>
+                        <div class="mode-option-content">
+                            <div class="mode-option-title">Admin Mode</div>
+                            <div class="mode-option-desc">Full access to all features</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item active"><a href="worker-create-invoice.html" class="nav-item active">📝 Create Invoice</a></li>
+                <li><a href="worker-my-invoices.html" class="nav-item">🕐 My Invoices</a></li>
+            </ul>
+
+            <div class="user-profile">
+                <div class="user-avatar">W</div>
+                <div class="user-info">
+                    <div class="user-name">Worker User</div>
+                    <div class="user-email">admin@easybilling.com</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <header>
+                <div>
+                    <h1>Create Invoice</h1>
+                    <p style="color: #6B7280; margin-top: 0.5rem;">Fill in the details to generate your invoice</p>
+                </div>
+            </header>
+
+            <div class="form-section">
+                <h2 class="section-title">Customer Details</h2>
+                
+                <div class="form-group">
+                    <label>Customer Name</label>
+                    <input type="text" placeholder="Customer Name">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Invoice Date</label>
+                        <input type="date" value="2026-02-16">
+                    </div>
+                    <div class="form-group">
+                        <label>Invoice Number</label>
+                        <input type="text" placeholder="#INV-1235" value="#INV-1235">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="items-header">
+                    <h2 class="section-title" style="margin: 0;">Items & Services</h2>
+                    <button class="add-item-btn">+ Add Item</button>
+                </div>
+
+                <table class="items-table">
+                    <thead>
+                        <tr>
+                            <th>Item Name</th>
+                            <th>Quantity</th>
+                            <th>Unit Price</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" value="Rice"></td>
+                            <td><input type="number" value="2" style="width: 80px;"></td>
+                            <td><input type="text" value="₹ 60" style="width: 100px;"></td>
+                            <td class="total-cell">₹120.00</td>
+                            <td><button class="delete-btn">🗑</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn-action btn-primary">⬇ Download PDF</button>
+                <button class="btn-action btn-success">🖨 Print Invoice</button>
+                <button class="btn-action btn-secondary">💾 Save Draft</button>
+            </div>
+
+            <div class="summary-section">
+                <div class="summary-card">
+                    <h3 class="chart-title">Invoice Summary</h3>
+                    
+                    <div class="summary-row">
+                        <span class="summary-label">Subtotal</span>
+                        <span class="summary-value">₹120.00</span>
+                    </div>
+                    
+                    <div class="summary-row">
+                        <span class="summary-label">Tax (5%)</span>
+                        <span class="summary-value">₹6.00</span>
+                    </div>
+                    
+                    <div class="summary-row">
+                        <span class="summary-label grand-total">Grand Total</span>
+                        <span class="summary-value grand-total">₹126.00</span>
+                    </div>
+
+                    <button class="generate-btn">Generate Bill</button>
+                </div>
+
+                <div class="preview-section">
+                    <h3 class="preview-title">Quick Preview</h3>
+                    
+                    <div class="preview-item">
+                        <div class="preview-item-label">Customer</div>
+                        <div class="preview-item-value">Customer Name</div>
+                    </div>
+
+                    <div class="preview-item">
+                        <div class="preview-item-label">Items</div>
+                        <div class="preview-item-value">1 item(s)</div>
+                    </div>
+
+                    <div class="preview-item">
+                        <div class="preview-item-label">Invoice Number</div>
+                        <div class="preview-item-value">#INV-1235</div>
+                    </div>
+
+                    <div class="preview-item">
+                        <div class="preview-item-label">Total Amount</div>
+                        <div class="preview-amount">₹126.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="mode-switcher.js"></script>
+</body>
+</html>

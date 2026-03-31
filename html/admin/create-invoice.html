@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Invoice - Easy Billing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <div class="app-layout">
+        <div class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">📄</div>
+                <div class="logo-text">Easy Billing</div>
+            </div>
+
+            <div class="mode-badge">
+                <div class="mode-title">👤 Admin Mode</div>
+                <div class="mode-subtitle">Full access to all features</div>
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="dashboard.html" class="nav-item">📊 Dashboard</a></li>
+                <li class="nav-item active"><a href="create-invoice.html" class="nav-item active">📝 Create Invoice</a></li>
+                <li><a href="clients.html" class="nav-item">👥 Clients</a></li>
+                <li><a href="invoice-history.html" class="nav-item">🕐 Invoice History</a></li>
+                <li><a href="reports.html" class="nav-item">📈 Reports</a></li>
+                <li><a href="settings.html" class="nav-item">⚙️ Settings</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <header>
+                <div>
+                    <h1>Create Invoice</h1>
+                    <p style="color: #6B7280; margin-top: 0.5rem;">Fill in the details to generate your invoice</p>
+                </div>
+            </header>
+
+            <div class="form-section">
+                <h2 class="section-title">Customer Details</h2>
+                
+                <div class="form-group">
+                    <label>Customer Name</label>
+                    <input type="text" placeholder="Customer Name">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Invoice Date</label>
+                        <input type="date" value="2026-02-12">
+                    </div>
+                    <div class="form-group">
+                        <label>Invoice Number</label>
+                        <input type="text" placeholder="#INV-1235" value="#INV-1235">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="items-header">
+                    <h2 class="section-title" style="margin: 0;">Items & Services</h2>
+                    <button class="add-item-btn">+ Add Item</button>
+                </div>
+
+                <table class="items-table">
+                    <thead>
+                        <tr>
+                            <th>Item Name</th>
+                            <th>Quantity</th>
+                            <th>Unit Price</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" value="Rice"></td>
+                            <td><input type="number" value="2" style="width: 80px;"></td>
+                            <td><input type="text" value="₹ 60" style="width: 100px;"></td>
+                            <td class="total-cell">₹120.00</td>
+                            <td><button class="delete-btn">🗑</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn-action btn-primary">⬇ Download PDF</button>
+                <button class="btn-action btn-success">🖨 Print Invoice</button>
+                <button class="btn-action btn-secondary">💾 Save Draft</button>
+            </div>
+
+            <div class="summary-section">
+                <div class="summary-card">
+                    <h3 class="chart-title">Invoice Summary</h3>
+                    
+                    <div class="summary-row">
+                        <span class="summary-label">Subtotal</span>
+                        <span class="summary-value">₹120.00</span>
+                    </div>
+                    
+                    <div class="summary-row">
+                        <span class="summary-label">Tax (5%)</span>
+                        <span class="summary-value">₹6.00</span>
+                    </div>
+                    
+                    <div class="summary-row">
+                        <span class="summary-label grand-total">Grand Total</span>
+                        <span class="summary-value grand-total">₹126.00</span>
+                    </div>
+
+                    <button class="generate-btn">Generate Bill</button>
+                </div>
+
+                <div class="preview-section">
+                    <h3 class="preview-title">Quick Preview</h3>
+                    
+                    <div class="preview-item">
+                        <div class="preview-item-label">Customer</div>
+                        <div class="preview-item-value">Customer Name</div>
+                    </div>
+
+                    <div class="preview-item">
+                        <div class="preview-item-label">Items</div>
+                        <div class="preview-item-value">1 item(s)</div>
+                    </div>
+
+                    <div class="preview-item">
+                        <div class="preview-item-label">Invoice Number</div>
+                        <div class="preview-item-value">#INV-1235</div>
+                    </div>
+
+                    <div class="preview-item">
+                        <div class="preview-item-label">Total Amount</div>
+                        <div class="preview-amount">₹126.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

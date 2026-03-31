@@ -1,0 +1,24 @@
+[build]
+  # When deploying the entire repo, tell Netlify to enter the client directory
+  base = "client"
+  # Command to build the React application with a cleanup of any uploaded node_modules
+  command = "rm -rf node_modules .netlify package-lock.json && npm install && npm run build"
+  # The directory that contains the compiled static site
+  publish = "dist"
+
+[build.environment]
+  # Optional: specify Node.js version to ensure compatibility
+  NODE_VERSION = "20"
+
+[[redirects]]
+  # Redirect API calls to your hosted backend (replace this URL on Netlify)
+  from = "/api/*"
+  to = "https://your-backend-url.onrender.com/api/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  # This rule ensures React Router handles all other routes (SPA fallback)
+  from = "/*"
+  to = "/index.html"
+  status = 200
