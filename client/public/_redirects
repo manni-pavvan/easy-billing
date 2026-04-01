@@ -1,5 +1,5 @@
 # Proxy API requests to your hosted backend (replace URL before deploying)
-/api/* https://your-backend-url.onrender.com/api/:splat 200!
+/api/* https://easy-billing-1.onrender.com/api/:splat 200!
 
 # SPA routing fallback
 /* /index.html 200

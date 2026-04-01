@@ -13,7 +13,7 @@
 [[redirects]]
   # Redirect API calls to your hosted backend (replace this URL on Netlify)
   from = "/api/*"
-  to = "https://your-backend-url.onrender.com/api/:splat"
+  to = "https://easy-billing-1.onrender.com/api/:splat"
   status = 200
   force = true
 
