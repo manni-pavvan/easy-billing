@@ -2,7 +2,7 @@
   # When deploying the entire repo, tell Netlify to enter the client directory
   base = "client"
   # Command to build the React application with a cleanup of any uploaded node_modules
-  command = "rm -rf node_modules .netlify package-lock.json && npm install && npm run build"
+  command = "npm install && npm run build"
   # The directory that contains the compiled static site
   publish = "dist"
 
